@@ -1,0 +1,7 @@
+Product#in_stock
+Boas notícias!
+
+<%= @product.name %> está de volta ao estoque.
+<%= product_url(@product) %>
+
+Descadastrar: <%= unsubscribe_url(token: params[:subscriber].generate_token_for(:unsubscribe)) %>

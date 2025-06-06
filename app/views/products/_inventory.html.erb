@@ -1,0 +1,11 @@
+<% if product.inventory_count? %>
+  <p><%= product.inventory_count %> em estoque</p>
+<% else %>
+  <p>Fora de estoque</p>
+  <p>Me avise quando estiver disponível.</p>
+
+  <%= form_with model: [product, Subscriber.new] do |form| %>
+    <%= form.email_field :email, placeholder: "voce@exemplo.com", required: true %>
+    <%= form.submit "Enviar" %>
+  <% end %>
+<% end %>
