@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_15_190427) do
+ActiveRecord::Schema[8.0].define(version: 2025_06_06_224032) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -72,6 +72,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_15_190427) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "unsubscribe_token"
     t.index ["product_id"], name: "index_subscribers_on_product_id"
   end
 

@@ -1,7 +1,6 @@
-Product#in_stock
-Boas notícias!
+Good news!
 
-<%= @product.name %> está de volta ao estoque.
+<%= @product.name %> is back in stock.
 <%= product_url(@product) %>
 
-Descadastrar: <%= unsubscribe_url(token: params[:subscriber].generate_token_for(:unsubscribe)) %>
+Unsubscribe: <%= unsubscribe_url(token: params[:subscriber].generate_token_for(:unsubscribe)) %>

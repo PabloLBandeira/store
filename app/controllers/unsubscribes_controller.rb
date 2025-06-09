@@ -4,7 +4,7 @@ class UnsubscribesController < ApplicationController
 
   def show
     @subscriber&.destroy
-    redirect_to root_path, notice: "Descadastrado com sucesso."
+    redirect_to root_path, notice: "Unsubscribed successfully."
   end
 
   private

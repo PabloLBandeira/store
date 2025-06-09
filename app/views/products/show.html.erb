@@ -1,9 +1,12 @@
 <% cache @product do %>
   <h1><%= @product.name %></h1>
 
+<section class="product">  
   <% if @product.featured_image.attached? %>
     <%= image_tag @product.featured_image, style: "min-width: 200px; max-width: 400px; height: auto;" %>
   <% end %>
+
+  <section class="product-info">
 
   <p><strong>Price:</strong> <%= @product.price ? "R$ #{'%.2f' % @product.price}" : "-" %></p>
   <p><strong>Description:</strong> <%= @product.description.presence || "-" %></p>
@@ -15,6 +18,9 @@
   <%= link_to "Edit", edit_product_path(@product) %>
   <%= button_to "Delete", @product, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
 <% end %>
+
+  </section>
+</section>
 
 <%= link_to "Back", products_path %>
 

@@ -1,5 +1,4 @@
 class Subscriber < ApplicationRecord
   belongs_to :product
-  generates_token_for :unsubscribe
-
+  has_secure_token :unsubscribe_token
 end

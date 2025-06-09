@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   root "products#index"
   resource :session
   resources :passwords, param: :token
@@ -9,9 +8,5 @@ Rails.application.routes.draw do
     resources :subscribers, only: [ :create ]
   end
 
-  resource :unsubscribe, only: [:show]
+  resource :unsubscribe, only: [ :show ]
 end
-
-
-
-
